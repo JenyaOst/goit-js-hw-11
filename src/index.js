@@ -4,7 +4,7 @@ import throttle  from "lodash.throttle";
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
-// import { scrollWindow } from "./helpers/scroll";
+
 import { btnUp } from "./helpers/scroll";
 
 var lightbox = new SimpleLightbox('.gallery a');
@@ -105,20 +105,6 @@ async function getPhoto(query) {
 return response;
 }
 
-//* Another fetch (without axios)
-// function getPhoto() {
-// return fetch(`${BASE_URL}?${params}`)
-//     .then(response => {
-//         console.log(response);
-//         if(!response.ok){
-//         throw new Error (response.statusText)
-//         }
-//         return response.json()})
-//     .then(data => {
-//         console.log(data);
-//     })
-//     .catch(err => new Error(err))
-// }
 
 //* Card markup
 // {webformatURL, largeImageURL, tags, likes, views, comments, downloads}
